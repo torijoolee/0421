@@ -34,11 +34,112 @@
   .sec03 {
     padding: 130px 0;
   }
-  .sec02 .img-wrap {
+  .sec02 .img-wrap,
+  .sec04 .img-wrap {
     width: 430px;
     height: 430px;
   }
   .footer .inner {
     padding: 0 20px;
+  }
+}
+@media screen and (max-width: 899px) {
+  .nav-btn {
+    display: block;
+  }
+  .header {
+    height: 57px;
+  }
+  .header h1 {
+    font-size: 2.3rem;
+  }
+  .nav-btn {
+    display: block;
+    width: 28px;
+    height: 22px;
+    /* background-color: #eee; */
+    position: relative;
+    cursor: pointer;
+  }
+  .header .nav {
+    z-index: 3;
+  }
+  .header .nav li {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+  .header .nav-btn span {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: gray;
+    transition: all 0.5s ease-out;
+  }
+  .header .nav-btn span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .header .nav-btn span:nth-child(3) {
+    bottom: 0px;
+  }
+  .header.Active .nav-btn span:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%);
+    transform: rotate(45deg);
+  }
+  .header.Active .nav-btn span:nth-child(2) {
+    transform: translateX(0%);
+    opacity: 0;
+  }
+  .header.Active .nav-btn span:nth-child(3) {
+    top: 50%;
+    transform: translateY(-50%);
+    transform: rotate(-45deg);
+  }
+
+  .header .nav {
+    position: fixed;
+    top: 57px;
+    z-index: 2;
+    width: 100%;
+    flex-direction: column;
+    height: calc(100% - 57px);
+    background-color: #eee;
+    right: -100%;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-out;
+  }
+  .header.Active .nav {
+    right: 0;
+  }
+  .header .nav li a {
+    font-size: 4rem;
+    border-bottom: 1px solid #ccc;
+    padding: 0 30px;
+  }
+  /* visual */
+  .visual {
+    height: calc(100vh - 57px);
+  }
+  .visu-txt {
+    justify-content: flex-end;
+    padding-bottom: 80px;
+  }
+  .sec01 .txt-wrap {
+    margin-bottom: 50px;
+  }
+  .sec01-list {
+    flex-wrap: wrap;
+    max-width: 480px;
+    margin: auto;
+  }
+  .sec01-list li {
+    width: calc(100% / 2 - 8px);
+    height: auto;
+    margin-bottom: 50px;
+  }
+  .sec01 .cont-txt {
+    margin-top: 15px;
   }
 }
